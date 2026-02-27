@@ -138,3 +138,103 @@ fun PrimerPantalla() {
 
 }
 
+@Composable
+@Preview(showSystemUi = true)
+fun SegundaPantalla() {
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        Image(
+            painter = painterResource(id = R.drawable.imagen),
+            contentDescription = "Perfil",
+            modifier = Modifier
+                .size(120.dp)
+                .clip(RoundedCornerShape(100.dp))
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "Juan Pérez",
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            text = "Desarrollador Android apasionado por la tecnología y el diseño.",
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("150", fontWeight = FontWeight.Bold)
+                Text("Posts", color = Color.Gray)
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("2.3K", fontWeight = FontWeight.Bold)
+                Text("Seguidores", color = Color.Gray)
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("980", fontWeight = FontWeight.Bold)
+                Text("Likes", color = Color.Gray)
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(50))
+                    .background(Color(0xFF6A4FB3))
+                    .padding(vertical = 12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text("Seguir", color = Color.White)
+            }
+
+            Spacer(modifier = Modifier.width(16.dp))
+
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(50))
+                    .background(Color.White)
+                    .border(
+                        width = 1.dp,
+                        color = Color.Gray,
+                        shape = RoundedCornerShape(50)
+                    )
+                    .padding(vertical = 12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text("Mensaje", color = Color(0xFF6A4FB3))
+            }
+        }
+
+
+
+
+    }
+}
+
